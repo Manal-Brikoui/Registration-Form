@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Formulaire sécurisé</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+<div class="container">
+  <!-- Section Connexion -->
+  <div id="loginSection">
+    <h2>Connexion</h2>
+    <input type="email" id="loginEmail" placeholder="Email" required>
+    <input type="password" id="loginPassword" placeholder="Mot de passe" required>
+    <button onclick="checkLogin()">Se connecter</button>
+    <p id="loginMessage"></p>
+  </div>
+
+  <!-- Formulaire d'inscription -->
+  <form id="mainForm" style="display: none;" onsubmit="handleSubmit(event)">
+    <h2>Formulaire d'inscription</h2>
+
+    <label>Nom:</label>
+    <input type="text" name="nom" required>
+
+    <label>Prénom:</label>
+    <input type="text" name="prenom" required>
+
+    <label>Email:</label>
+    <input type="email" name="email" required>
+
+    <label>Téléphone:</label>
+    <input type="tel" name="telephone" required>
+
+    <label>Filière:</label>
+    <select name="filiere" required>
+      <option value="">-- Sélectionner votre filière --</option>
+      <option value="Génie Informatique">Génie Informatique</option>
+      <option value="Data Science">Data Science</option>
+      <option value="Génie Civil">Génie Civil</option>
+      <option value="Génie Électrique">Génie Électrique</option>
+      <option value="Génie Mécanique">Génie Mécanique</option>
+      <option value="Génie Industriel">Génie Industriel</option>
+      <option value="Télécommunications">Télécommunications</option>
+      <option value="Réseaux et Sécurité">Réseaux et Sécurité</option>
+      <option value="Automatique et Robotique">Automatique et Robotique</option>
+    </select>
+
+    <label>Sexe:</label>
+    <select name="sexe" required>
+      <option value="">-- Sélectionner --</option>
+      <option value="Homme">Homme</option>
+      <option value="Femme">Femme</option>
+    </select>
+
+    <label>Date de naissance:</label>
+    <input type="date" name="naissance" required>
+
+    <label>Numéro de carte nationale:</label>
+    <input type="text" name="carte" required>
+
+    <label>Image:</label>
+    <input type="file" name="image" accept="image/*" required>
+
+    <button type="submit">Envoyer</button>
+  </form>
+
+  <div id="successMessage" class="success-message" style="display: none;">
+    ✅ <strong>Inscription enregistrée avec succès !</strong>
+  </div>
+</div>
+
+<script src="index.js"></script>
+</body>
+</html>
